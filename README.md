@@ -1,5 +1,13 @@
 # PitGPT Telemetry API
 
+## Hear the coaching message (macOS)
+
+```bash
+curl -s http://localhost:3000/analysis \
+  | python3 -c "import sys,json; print(json.load(sys.stdin)['coachingMessage'])" \
+  | say -v Daniel
+```
+
 Bun/Hono API that ingests racing simulator telemetry and returns lap analysis and coaching insights. Built as a solution to the [RACEMAKE Hard Engineer Challenge](https://gist.github.com/743milan/90a461d9b8ac3ec080f50de926590f15).
 
 **Stack:** Bun, Hono, TypeScript
